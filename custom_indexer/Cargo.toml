@@ -1,0 +1,33 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "custom_indexer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+alloy-sol-types = "0.7.4"
+eyre = "0.6.12"
+futures = "0.3.30"
+reth = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-exex = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-node-api = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-node-ethereum = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-primitives = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-provider = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-tracing = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+rusqlite = "0.31.0"
+
+[dev-dependencies]
+reth-exex-test-utils = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+reth-testing-utils = { git = "https://github.com/paradigmxyz/reth", rev = "c2650388" }
+tokio = { version = "1", features = ["full"] }
+tempfile = "3.8"
+rand = "0.8.5"
+serial_test = "3.1"
+
+[patch.crates-io]
+revm = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+revm-interpreter = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+revm-precompile = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+revm-primitives = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
