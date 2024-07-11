@@ -1,0 +1,12 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "custom_revm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+alloy-sol-types = "0.7"
+anyhow = "1.0.86"
+revm = "9"
+tokio = { version = "1", features = ["full"] }
